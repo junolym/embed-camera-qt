@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = qt5-cam-demo
+TARGET = camera-qt5
 
 QMAKE_LFLAGS += -L/usr/lib/x86_64-linux-gnu/
 
@@ -9,18 +9,12 @@ CONFIG += mobility
 MOBILITY += multimedia
 
 HEADERS = cameracapture.h \
-          camera-capture-settings.h \
           cameracapture.h
-          
+
 SOURCES = main.cpp \
-          cameracapture.cpp \    
-          camera-capture-settings.cpp
-          
+          cameracapture.cpp
+
 FORMS += cameracapture.ui \
-         settings.ui \
-    
-OTHER_FILES += \
-    deploy.sh \
-    camtest.desktop \
-    run.sh
+
+OTHER_FILES +=
 

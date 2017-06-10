@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CameraCapture</class>
+ <widget class="QMainWindow" name="CameraCapture">
+  <property name="geometry">
+   <rect>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget"></widget>
+ </widget>
+</ui>
