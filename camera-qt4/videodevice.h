@@ -19,12 +19,13 @@
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
-class VideoDevice : public QObject
-{
+#define Width 640
+#define Height 480
+
+class VideoDevice : public QObject {
     Q_OBJECT
 public:
-    VideoDevice(QString dev_name);
-    //VideoDevice();
+    VideoDevice();
     int open_device();
     int close_device();
     int init_device();
@@ -37,19 +38,15 @@ public:
 private:
     int init_mmap();
 
-    struct buffer
-    {
+    struct buffer {
         void * start;
         unsigned  length;
     };
-    QString dev_name;
+    char* dev_name;
     int fd;
     buffer* buffers;
     unsigned int n_buffers;
     int index;
-
-signals:
-    void display_error(QString);
 
 };
 
